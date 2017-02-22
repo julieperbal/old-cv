@@ -1,0 +1,618 @@
+/* Image de fond de mon CV et sa mise en page */
+body
+{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	background-image: url("../Fonds/4119.jpg");
+	background-color: rgba(18, 18, 17, 0.9);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: 100%;
+	/*background-blend-mode: soft-light;*/
+	background-blend-mode: difference;
+}
+.container-main
+{
+	width: 85%;
+	height: 85%;
+	margin: 0 auto;
+	/*font-family: */
+}
+
+/**************************************
+
+  		        FONT-FACE
+
+/*************************************/
+/* Utilisation de font-face et d'une nouvelle police sur les titres de sections de mon CV + ombrage et bordure */
+@font-face {
+    font-family: 'blakeregular';
+    src: url('../fonts/blake2-webfont.woff2') format('woff2'),
+         url('../fonts/blake2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'paper_clipregular';
+    src: url('../fonts/paperclip-webfont.woff2') format('woff2'),
+         url('../fonts/paperclip-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'red_moon_risingregular';
+    src: url('../fonts/red_moon_rising-webfont.woff2') format('woff2'),
+         url('../fonts/red_moon_rising-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'basic_title_fontregular';
+    src: url('../fonts/basictitlefont-webfont.woff2') format('woff2'),
+         url('../fonts/basictitlefont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lombokregular';
+    src: url('../fonts/lombok-webfont.woff2') format('woff2'),
+         url('../fonts/lombok-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'megrimmedium';
+    src: url('../fonts/megrim-webfont.woff2') format('woff2'),
+         url('../fonts/megrim-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**************************************
+
+  		           NAVBAR
+
+/*************************************/
+.navbar
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar ul
+{
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.navbar li
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+li a
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin: 0 17px;
+	text-decoration: none;
+  font-size: 23px;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'basic_title_fontregular', arial;
+	font-weight: bold;
+	padding-top: 5%;
+	height: 60px;
+}
+li a:hover
+{
+	color: #fc50d1;
+}
+
+/*.rotate a.modal1:hover
+{
+  text-decoration: none;
+	background-image: url("../icons/portfolio.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+.rotate a.modal2:hover
+{
+  text-decoration: none;
+	background-image: url("../icons/settings.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+.rotate a.modal3:hover
+{
+  text-decoration: none;
+	background-image: url("../icons/graduation-hat-and-diploma.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}*/
+
+/**************************************
+
+  		        JUMBOTRON
+
+/*************************************/
+.jumbotron
+{
+	box-sizing: border-box;
+	padding: 100px 0;
+	text-align: center;
+  width: 100%;
+  padding-top: 13%;
+  padding-bottom: 25%;
+  vertical-align: middle;
+  color: #ffffff;
+	letter-spacing: 0.2em;
+	font-size: 50px;
+	/*margin: 0 auto*/
+}
+h1
+{
+	color: #ffffff;
+	text-align: center;
+	letter-spacing: 0.1em;
+	margin-bottom: 0%;
+	font-weight:100;
+	font-family: 'red_moon_risingregular';
+}
+h4
+{
+	color: #cccccc;
+	font-size: 25px;
+	/*font-weight: 300;*/
+	line-height: 1.5;
+	letter-spacing: 0.2em;
+	font-family:'megrimmedium';
+}
+h2
+{
+	font-family: 'megrimmedium';
+	color: #ffffff;
+	font-weight:600;
+	font-size: 52px;
+	font-weight: inherit;
+	/*font-weight: bold;*/
+}
+
+/**************************************
+
+  		     ANIMATION NOM
+
+/*************************************/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/*<!--~~~~~~~~ Informations complémentaires ~~~~~~~~-->*/
+aside
+{
+	text-align: center;
+}
+
+/**************************************
+
+  		           BIO
+
+/*************************************/
+.bio
+{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-family: 'basic_title_fontregular';
+	padding-top: 10%;
+	padding-bottom: 15%;
+	font-size: 20px;
+}
+.ligne
+{
+	display: flex;
+	justify-content: space-between;
+}
+.bio h3
+{
+	padding-left: 4%;
+	font-size: unset;
+}
+.built
+{
+	text-align: center;
+}
+/*.photo img
+{
+	border-radius: 50%;
+}*/
+
+/**************************************
+
+  		           CUBE
+
+/*************************************/
+/*<!--~~~~~~~~ Définir notion de perspective pour transformation 3D grâce à perspective et perspective-origin ~~~~~~~~-->*/
+.container-main h2{
+	padding-top: 5%;
+}
+
+.animation-cube {
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+		/*padding-top: 10%;*/
+		padding-bottom: 20%;
+		margin-top: 13%;
+}
+.cube h3
+{
+	font-family: 'basic_title_fontregular';
+	color: #ffffff;
+	font-weight:300;
+	font-size: 27px;
+	align-items: center;
+}
+.cube {
+    position: relative;
+    width: 200px;
+    transform-style: preserve-3d;
+}
+.cube div {
+    /*position: absolute;
+    width: 200px;
+    height: 200px;*/
+}
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.image-back{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    /*transform-origin: top right;*/
+}
+.left {
+    transform: rotateY(270deg) translateX(-200px);
+    transform-origin: center left;
+}
+.top {
+    transform: rotateX(-90deg) translateY(-100px);
+    transform-origin: top center;
+}
+.image-top{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.cube h3
+{
+	display: flex;
+	justify-content: center;
+}
+.cube img
+{
+	height: 100px;
+	width: 80px;
+}
+.image-top
+{
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+}
+.bottom {
+    transform: rotateX(90deg) translateY(100px);
+    transform-origin: bottom center;
+}
+.image-bottom{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.bottom img{
+	height: 130px;
+	width: 110px;
+}
+.image-bottom-rh
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+img .rh1, .rh2{
+	width: 300px;
+	height: 130px;
+}
+
+.front {
+    transform: translateZ(100px);
+}
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.cube {
+    animation: spin 20s infinite linear;
+}
+
+/**************************************
+
+  		     VERTICAL TIMELINE
+
+/*************************************/
+.logos-experience-sncf
+{
+	height: 50px;
+}
+.logos-experience-idrac
+{
+	height: 75px;
+}
+.logos-experience
+{
+	height: 80px;
+}
+
+/*<!--~~~~~~~~ Expériences/Compétences/Formation ~~~~~~~~-->*/
+.element
+{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	height: auto;
+	width: 100%;
+	vertical-align: top;
+	text-align: justify;
+}
+
+/*h3
+{
+	display: flex;
+	font-family: 'AmazingSound', Arial;
+	text-shadow: 2px 2px 4px black;
+	/*border: 2px black solid;*/
+	/*text-align: center;
+	color: #FF1493;
+}*/
+
+/**************************************
+
+  	  PORTFOLIO - CAROUSEL 3D
+
+/*************************************/
+#book
+{
+	padding-bottom: 7%;
+}
+.container-main h2
+{
+	padding-top: 5%;
+}
+.poster-main {
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+	padding-bottom: 30%;
+}
+
+.poster-main a, .poster-main img
+{
+	display: block;
+	height: 170%;
+}
+
+.poster-main .poster-list {
+  width: 1000px;
+  height: 500px;
+}
+
+.poster-main .poster-list {
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.poster-main .poster-btn {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+	color: #9400D3;
+}
+
+.poster-main .poster-prev-btn {
+  left: 0;
+  background: url(../img/left.png) no-repeat center center;
+}
+
+.poster-main .poster-next-btn {
+  right: 0;
+  background: url(../img/right.png) no-repeat center center;
+}
+.poster-item
+{
+	height: 250px;
+	left: 127px;
+}
+
+/*<!--~~~~~~~~ HR ~~~~~~~~-->*/
+hr
+{
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/**************************************
+
+  		     FORMATION UPTO
+
+/*************************************/
+.logos
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 8%;
+	padding-bottom: 10%;
+	width: 85%;
+	margin: 0 auto;
+}
+.logos img
+{
+	height: 85%;
+}
+.L img{
+	width: 350px;
+	height: 150px;
+}
+.M {
+	width: 320px;
+	height: 102px;
+	padding-right: 3%;
+}
+.upto
+{
+	padding-top: 5%;
+	color: white;
+	font-family: 'basic_title_fontregular';
+	font-size: 20px;
+}
+
+/**************************************
+
+  		         FOOTER
+
+/*************************************/
+#footer
+{
+	font-family: 'basic_title_fontregular';
+	font-size: 17px;
+	font-weight: bold;
+}
+#footer .contain-fa p
+{
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+	padding-bottom: 1%;
+	letter-spacing: 0.1em;
+}
+
+#footer .contain-fa
+{
+	diplay: flex;
+	flex-direction: row;
+	text-align: center;
+	color: #fff;
+	padding-top: 10%;
+	letter-spacing: 0.5em;;
+	margin-bottom: 1%;
+	font-size: 23px;
+	padding-bottom: 7%;
+}
+#footer a
+{
+	text-decoration: none;
+	color:inherit;
+	font-size: 3em;
+}
+#footer a:hover
+{
+	opacity: 0.8;
+	color: #fc0fc0;
+}
+
+.contain-fa a img
+{
+	height:60px;
+}
+.contain-fa a img:hover
+{
+	/*opacity: 0.8;*/
+	color: #fc0fc0;
+}
+/**************************************
+
+  		         COPYRIGHT
+
+/*************************************/
+.copyright p
+{
+	text-align: center;
+	font-family: 'basic_title_fontregular';
+	font-size: 17px;
+	font-weight: bold;
+	color: grey;
+}
+.copyright p i
+{
+	text-align: center;
+	color: grey;
+}
+
+/**************************************
+
+  		        BACK-TO-TOP
+
+/*************************************/
+#back-to-top
+{
+	position: fixed;
+	bottom: 5%;
+	right: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#back-to-top i
+{
+	border-radius: 40px;
+	width: 30px;
+	height: 30px;
+	background-color: #fc50d1;
+	color: #FFFFFF;
+	text-align: center;
+}
+.fa-chevron-up::before
+{
+	content:"\f077";
+	vertical-align: -moz-middle-with-baseline;
+}
+
+
+
+
+
+
+/* !!!! */
+/* Règles CSS lorsque la largeur de la fenètre fait au maximum 1024px */
+/*@media screen and (max-width: 1024px)*/
